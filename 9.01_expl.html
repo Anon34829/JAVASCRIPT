@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Playing with the DOM</title>
+</head>
+<body>
+<!--set and identifier for main heading without affecting other h1 elements-->
+<h1 id="main-heading">Hello world!</h1>
+
+
+<script>
+
+// save in the var the dom object (id main heading) -> searched through doc.getElemID
+var headingElement = document.getElementById("main-heading");
+// Print hello wrld to the console (string returned by var)
+ console.log(headingElement.innerHTML);
+ //use a prompt dialog to ask the usr a new heading and save the txt inserter in the var
+ var newHeadingText = prompt("Please provide a new heading:");
+ //effectively replace the txt content of h1 with the new text
+ headingElement.innerHTML = newHeadingText;
+</script>
+</body>
+</html>

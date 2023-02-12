@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<title>Playing with the DOM</title>
+</head>
+<body>
+<h1 id="main-heading">Hello world!</h1>
+<!-- loading the js library jquery into file (the scrpt is empty itself)-->
+ <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+var newHeadingText = prompt("Please provide a new heading:");
+/* Once the element has been selected, the code uses the .text() method
+ to set the text content of the element to the value of
+  the newHeadingText variable. This means that the text of the element 
+  with the ID "main-heading" will be replaced with the value of the 
+  newHeadingText variable. */
+ $("#main-heading").text(newHeadingText);
+</script>
+</body>
+</html>

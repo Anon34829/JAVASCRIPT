@@ -1,0 +1,55 @@
+<!--
+We use fadeIn to make invisible elements visible. But what
+happens if you call fadeIn on an element that’s already
+visible or an element that comes after the element you’re
+animating?
+For example, say you add a new p element to your
+dom.html document after the heading. Try using slideUp
+and slideDown to hide and show the h1 element, and see what
+happens to the p element. What if you use fadeOut and fadeIn?
+What happens if you call fadeOut and fadeIn on the same
+element without chaining the calls? For example:
+$("h1").fadeOut(1000);
+$("h1").fadeIn(1000);
+Try adding the preceding code inside a for loop set to
+run five times. What happens?
+What do you think the show and hide jQuery methods do?
+Try them out to see if you’re right. How could you use hide to
+fade in an element that’s already visible?
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Playing with the DOM</title>
+</head>
+<body>
+<h1 id="main-heading">Hello world!</h1>
+<h1 id="second-heading">Second h1 elem</h1>
+ <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+
+//var newHeadingText = prompt("Please provide a new heading:");
+
+
+ //$("#main-heading").text(newHeadingText);
+ //$("h1").fadeOut(3000).fadeIn(2000);
+ //$("#main-heading").text("This will fade out").fadeOut(3000);
+ $("h1").slideUp(1000).slideDown(1000);
+
+
+ /*
+ var timeUp = function () {
+alert("Time's up!");
+};
+ setTimeout(timeUp, 3000);
+*/
+
+ /*
+ for (var i = 0; i < 3; i++) {
+var hobby = prompt("Tell me one of your hobbies!");
+$("body").append("<p>" + hobby + "</p>");
+}
+*/
+</script>
+</body>
+</html>
